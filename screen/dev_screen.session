@@ -1,0 +1,45 @@
+
+chdir /home/kpfab/dev/panel/
+multiuser on
+
+title "panel-d"
+
+screen
+select 1
+title "panel-s"
+exec ./run.sh
+
+chdir /home/kpfab/dev/api/
+screen
+select 2
+title "api-d"
+exec ./init.sh
+
+screen
+select 3
+title "api-s"
+exec ./run.sh
+
+chdir /home/kpfab/dev/proxy/
+screen
+select 4
+title "proxy"
+exec ./run.sh
+
+chdir /home/kpfab/dev/
+screen
+select 5
+title "mysql"
+
+chdir /home/kpfab/dev/tasks/
+screen
+select 6
+title "tasks"
+exec ./run.sh
+
+chdir /var/chef/
+screen
+select 7
+title "chef"
+
+select 2
